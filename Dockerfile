@@ -1,20 +1,21 @@
-# Define la imagen base
+# Utilizar una imagen base de Python
 FROM python:3.9
 
-# Establece el directorio de trabajo en el contenedor
-WORKDIR /app
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /code
 
-# Copia el archivo requirements.txt al contenedor
-COPY requirements.txt .
+# Copiar los archivos de la aplicación en el contenedor
+COPY . /code/
 
-# Instala las dependencias del proyecto
-RUN pip install --no-cache-dir -r requirements.txt
+# Instalar las dependencias
+RUN pip install -r requirements.txt
 
-# Copia el contenido del proyecto al contenedor
-COPY . .
+# Ejecutar los comandos de migraciones de Django
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 
-# Expone el puerto que utilizará la aplicación
+# Exponer el puerto que usará el servidor Django (por ejemplo, 8000)
 EXPOSE 8000
 
-# Comando para ejecutar la aplicación Django
+# Iniciar el servidor Django
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
