@@ -1,0 +1,73 @@
+<div id="categories" class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Categorías</h3>
+                <div class="card-tools">
+                    <button id="create_category" class="btn btn-primary btn-sm">Crear Categoría</button>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive">
+                <table id="categoriesTable" class="table table-hover table-bordered table-striped" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Nombre</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" placeholder="id">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" placeholder="Nombre">
+                            </td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+<div id="create_categories" class="row d-none">
+    <!-- left column -->
+    <div class="col-md-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Crear Categoría</h3>
+                <div class="card-tools">
+                    <button class="btn btn-primary btn-sm" id="back_create_category">Volver</button>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="create_categoriesForm" role="form">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                        <label for="category_id" class="col-sm-6 col-form-label">Id</label>
+                            <input type="text" min="1" class="form-control" id="category_id"
+                                placeholder="Id de la categoría" data-validate="lleno:Indique un Id de la categoría" disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-sm-5 offset-sm-1">
+                            <label for="category_name" class="col-sm-6 col-form-label">Nombre</label>
+                            <input type="text" class="form-control" id="category_name" placeholder="Nombre de la Categoría"
+                                data-validate="lleno:Indique un nombre de de la categoría">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <button type="button" id="createCategory" class="btn btn-primary">Crear Categoría</button>
+                    <button type="button" id="updateCategory" class="btn btn-primary">Actualizar Categoría</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
