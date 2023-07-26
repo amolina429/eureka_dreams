@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_DB: eureka
       POSTGRES_USER: root
-      POSTGRES_PASSWORD: Molina429
+      POSTGRES_PASSWORD: root
 
   web:
     build: .
