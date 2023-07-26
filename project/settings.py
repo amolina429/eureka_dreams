@@ -90,11 +90,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sql_mode': 'STRICT_ALL_TABLES',
-        },
-
+        'PORT': '5432'
     }
 }
 
