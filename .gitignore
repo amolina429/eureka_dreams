@@ -14,7 +14,7 @@ logs/
 # migraciones
 /migrations/
 
-settings.py
+# settings.py
 
 # VENV
 venv/
